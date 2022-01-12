@@ -37,9 +37,7 @@ public class Main{
     }
 
     public void findVehicleByID(int vehID) {
-        String SQL = "SELECT veh_id, veh_name "
-                + "FROM vehicle "
-                + "WHERE veh_id = ?";
+        String SQL = "SELECT veh_id, veh_name FROM vehicle WHERE veh_id = ?";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL)) {
             pstmt.setInt(1, vehID);
@@ -51,8 +49,7 @@ public class Main{
     }
 
     public long insertVehicle(Vehicle vehicle) {
-        String SQL = "INSERT INTO vehicle(veh_name) "
-                + "VALUES(?)";
+        String SQL = "INSERT INTO vehicle(veh_name) VALUES(?)";
         long id = 0;
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL,
