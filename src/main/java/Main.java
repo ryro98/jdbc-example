@@ -4,7 +4,7 @@ public class Main{
 
     private final String url = "jdbc:postgresql://localhost/vehicles";
     private final String user = "postgres";
-    private final String password = "1975AMdd2007";
+    private final String password = "";
 
     public Connection connect() {
         Connection conn = null;
