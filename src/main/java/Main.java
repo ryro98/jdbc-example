@@ -3,7 +3,7 @@ import java.sql.*;
 public class Main{
 
     private final String url = "jdbc:postgresql://localhost/vehicles";
-    private final String user = "postgres";
+    private final String user = "";
     private final String password = "";
 
     public Connection connect() {
